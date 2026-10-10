@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "ReOpenTab",
+  "version": "1.0.0",
+  "description": "A firefox extension that makes CTRL-SHIFT-T reopen a closed tab just from the current window.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "reopentab@aeum.net",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "sessions"
+  ],
+  "commands": {
+    "reopen-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+T"
+      },
+      "description": "Reopen the last closed tab in the current window"
+    }
+  }
+}
